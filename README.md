@@ -5,7 +5,7 @@ Embeddable gallery, to be attached to any model
 ```php
 'modules' => [
     'gallery' => [
-        'class' => \common\modules\gallery\GalleryModule::className()
+        'class' => \maks757\egallery\GalleryModule::className()
     ],
     //...
 ],
