@@ -1,0 +1,21 @@
+{
+  "name": "maks757/embeddable-gallery",
+  "description": "Embeddable gallery, to be attached to any model",
+  "keywords": ["gallery"],
+  "type": "yii2-extension",
+  "authors": [
+    {
+      "name": "Max Cherednyk",
+      "email": "maks757q@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": ">=2.0.4",
+    "maks757/yii2-imagable": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "maks757\\egallery\\": ""
+    }
+  }
+}
