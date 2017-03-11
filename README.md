@@ -4,7 +4,7 @@ Embeddable gallery, to be attached to any model
 ### backend config 
 ```php
 'modules' => [
-    'gallery' => [
+    'egallery' => [
         'class' => \maks757\egallery\GalleryModule::className()
     ],
     //...
@@ -14,14 +14,14 @@ Embeddable gallery, to be attached to any model
 ### common config 
 ```php
 'components' => [
-        'gallery' => [
+        'egallery' => [
             'class' => \maks757\imagable\Imagable::className(),
             'imageClass' => CreateImageMetaMulti::className(),
             'nameClass' => GenerateName::className(),
             'imagesPath' => '@frontend/web/images',
             'categories' => [
                 'category' => [
-                    'gallery' => [
+                    'egallery' => [
                         'size' => [
                             'origin' => [
                                 'width' => 0,
