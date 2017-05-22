@@ -44,7 +44,7 @@ $this->registerCss($css);
 
                         $html .= \yii\helpers\Html::a(
                             '',
-                            Url::toRoute(['/gallery/image/delete', 'id' => $image->id, 'object_id' => $object->id, 'object_class' => $object->className()]),
+                            Url::toRoute(['/egallery/image/delete', 'id' => $image->id, 'object_id' => $object->id, 'object_class' => $object->className()]),
                             ['class' => 'glyphicon glyphicon-remove-circle']
                         );
                         $html .= '<br>';
