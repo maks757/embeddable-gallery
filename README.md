@@ -35,6 +35,35 @@ Embeddable gallery, to be attached to any model
         //...
     ],
 ```
+
+### views
+```php
+<?php if(!empty($model->id)): ?>
+    <?= $form->field(new \maks757\egallery\components\UploadForm(), 'imageFiles[]')->widget(FileInput::className(), [
+        'options' => [
+            'multiple' => true,
+            'accept' => 'image/*'
+        ],
+        'pluginOptions' => [
+            'showRemove' => false,
+            'previewFileType' => 'image',
+            'maxFileCount' => 20,
+            'uploadUrl' => Url::toRoute(['/egallery/image/upload']),
+            'uploadExtraData' => [
+                'id' => $model->id,
+                'key' => $model->className()
+            ],
+        ],
+        'pluginEvents' => [
+            'fileuploaded' => 'function() { $.pjax.reload({container:"#pjax_block", timeout: 100000, url: "'.Url::to('', true).'"}); }'
+        ]
+    ])->label('Загрузка изображений') ?>
+    <?php Pjax::begin(['enablePushState' => false, 'id' => 'pjax_block']) ?>
+    <?= \maks757\egallery\widgets\show_images\Gallery::widget(['object' => $model, 'show_name' => false]) ?>
+    <?php Pjax::end() ?>
+<?php endif; ?>
+```
+
 ![Alt text](/image/author.jpg "Optional title")
 
 [VK](https://vk.com/maverick757)<br>
