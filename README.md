@@ -36,3 +36,7 @@ Embeddable gallery, to be attached to any model
     ],
 ```
 ![Alt text](/image/author.jpg "Optional title")
+
+[VK](https://vk.com/maverick757)<br>
+[Google](https://plus.google.com/u/1/115560753977134232792)<br>
+[GitHub](https://github.com/maks757)
