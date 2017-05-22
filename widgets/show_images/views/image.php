@@ -2,17 +2,18 @@
 /**
  * @author Maxim Cherednyk <maks757q@gmail.com, +380639960375>
  */
-use kartik\sortable\Sortable;
+
 use yii\helpers\Url;
+use yii\jui\Sortable;
 use yii\widgets\Pjax;
 
 /**
  * @var $this \yii\web\View
  * @var $url string
- * @var $images \common\modules\gallery\entities\Gallery[]
+ * @var $images \maks757\egallery\entities\Gallery[]
  */
 $index = 0;
-$url_drop_down = \yii\helpers\Url::toRoute(['/gallery/image/change-position'], true);
+$url_drop_down = \yii\helpers\Url::toRoute(['/egallery/image/change-position'], true);
 $css = <<<css
 .sortable-placeholder{
     min-width: 208px !important;
