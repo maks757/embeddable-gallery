@@ -29,8 +29,8 @@ class UploadForm extends Model
             $path = [];
             foreach ($this->imageFiles as $file) {
                 /**@var Imagable $imagine */
-                $imagine = \Yii::$app->gallery;
-                $path = $imagine->create('gallery', $file);
+                $imagine = \Yii::$app->egallery;
+                $path = $imagine->create('egallery', $file);
             }
             return $path;
         } else {
