@@ -32,8 +32,8 @@ class ImageController extends Controller
                 $gallery = new Gallery();
                 $gallery->key = md5($request->post('key'));
                 $gallery->object_id = $request->post('id');
-                $position = Gallery::find()->where(['key' => $gallery->key, 'object_id' => $gallery->object_id])->orderBy(['position' => SORT_DESC])->one()->position;
-                $gallery->position = empty($position) ? 1 : $position + 1;
+                $gallery_position = Gallery::find()->where(['key' => $gallery->key, 'object_id' => $gallery->object_id])->orderBy(['position' => SORT_DESC])->one();
+                $gallery->position = empty($gallery_position) ? 1 : $gallery_position->position + 1;
                 $gallery->image = $path;
                 $gallery->save();
                 return true;
