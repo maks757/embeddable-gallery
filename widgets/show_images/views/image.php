@@ -4,7 +4,7 @@
  */
 
 use yii\helpers\Url;
-use yii\jui\Sortable;
+use kartik\sortable\Sortable;
 use yii\widgets\Pjax;
 
 /**
