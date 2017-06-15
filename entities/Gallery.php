@@ -57,10 +57,10 @@ class Gallery extends \yii\db\ActiveRecord
      * @param string $type
      * @return string
      */
-    public function getImage($category = 'gallery', $type = 'origin')
+    public function getImage($category = 'egallery', $type = 'origin')
     {
         /**@var Imagable $imagine */
-        $imagine = \Yii::$app->gallery;
+        $imagine = \Yii::$app->egallery;
         $imagePath = $imagine->get($category, $type, $this->image);
         $aliasPath = BaseFileHelper::normalizePath(Yii::getAlias('@frontend/web'));
         $image = str_replace($aliasPath,'',$imagePath);
@@ -70,8 +70,8 @@ class Gallery extends \yii\db\ActiveRecord
     public function delete()
     {
         /** @var Imagable $imagine */
-        $imagine = \Yii::$app->gallery;
-        $imagePath = $imagine->get('gallery', 'origin', $this->image);
+        $imagine = \Yii::$app->egallery;
+        $imagePath = $imagine->get('egallery', 'origin', $this->image);
         unlink($imagePath);
         return parent::delete();
     }
